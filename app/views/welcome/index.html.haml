@@ -1,0 +1,11 @@
+%h1 Welcome Page
+=link_to 'Sign Up', sign_up_path
+
+
+%p
+  -if current_user
+    %strong Signed in as:
+    =current_user.email
+    %p=link_to 'Click here to Sign Out', sign_out_path
+  -else
+    =link_to 'Click here to Sign In', sign_in_path
